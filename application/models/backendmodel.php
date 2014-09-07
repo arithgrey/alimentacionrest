@@ -3,15 +3,29 @@
  class backendmodel extends CI_Model {
     function __construct()
     {
-        parent::__construct();
-        
+        parent::__construct();        
+        $this->load->database();
+    }
+
+    /**/
+    function listtipoingrediente(){
+
+      $query_list="SELECT nombre FROM tipoingrediente";     
+      $result = $this->db->query($query_list);
+      return $result->result_array();
 
     }
 
+    function listpresentacion(){
+
+      $query_list="SELECT nombre FROM presentacion";     
+      $result = $this->db->query($query_list);
+      return $result->result_array();
+    }
+
+    /**/
     function registrapresentacion($nombre , $descripcion){
-  
-      $this->load->database();
-      
+              
       $query_insert="INSERT INTO presentacion (nombre, descripcion, status) VALUES('".$nombre."' , '".$descripcion."', '1'  ) ";     
       $result = $this->db->query($query_insert);
 
@@ -28,23 +42,27 @@
     }
 
   	function registratipoingrediente($nombre , $descripcion){
-
-  		$this->load->database();
-  		
+    	
   		$query_insert="INSERT INTO tipoingrediente (nombre, descripcion, status) VALUES('".$nombre."' , '".$descripcion."', '1'  ) ";  		
   		$result = $this->db->query($query_insert);
 
-  		$databasemsj="";
+    		$databasemsj="";
 
-  		if ($result == 1) {
-  			$databasemsj="Tipo de ingrediente registrado con éxito!!";
-  		}else{
-  			$databasemsj="Problemas al registrar en la base de datos";
-  		}
+    		if ($result == 1) {
+    			$databasemsj="Tipo de ingrediente registrado con éxito!!";
+    		}else{
+    			$databasemsj="Problemas al registrar en la base de datos";
+    		}
 
-  		return $databasemsj;
+    		return $databasemsj;
 
   	}
+
+
+
+    
+
+
 }
 
 

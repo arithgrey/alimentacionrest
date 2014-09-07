@@ -34,7 +34,22 @@ class Backend extends REST_Controller{
 
             $this->response($data);
 
-
     }
+    
+    function listtipos_GET(){
+
+            $this->load->model("backendmodel");            
+            $data = $this->backendmodel->listtipoingrediente();
+            $this->response($data);
+    }
+
+    function listpresentacion_GET(){
+
+            $this->load->model("backendmodel");            
+            $data = $this->backendmodel->listpresentacion();
+            $this->response($data);
+    }
+
+
 
 }
