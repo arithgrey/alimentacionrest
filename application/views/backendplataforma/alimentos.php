@@ -3,7 +3,8 @@
 	<div class="large-12 columns">
 		<button onclick="showtipolimentos()">Tipos de alimentos</button>		
 		<button onclick="showpresentacion()">Presentación de los alimentos</button>	
-		<button onclick="redirecalimento('<?=base_url()?>')">Registro de alimentos</button>
+		<button onclick="redirecalimento('<?=base_url()?>')">Alimentos</button>
+		<button onclick="">Opciones de menú</button>
 	</div>	
 </div>
 

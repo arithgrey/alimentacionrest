@@ -14,6 +14,7 @@
 	    );	    
 	?>
 	<?=meta($meta);?>
+	<meta name="author" content="Jonathan Govinda Medrano Salazar arithgrey@gmail.com" />
 	<!--CSS-->
 	<?=link_tag('application/css/foundation.min.css');?>
 	<?=link_tag('application/css/normalize.css');?>

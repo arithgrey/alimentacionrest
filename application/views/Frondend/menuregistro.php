@@ -55,14 +55,14 @@
 				<div class="large-6 columns" >
 					<label>Unidad</label>
 					<select name="unidad" id="unidad" class="unidad">
+						
 						<option value=""></option>				
-						<option value="1">ML</option>
-						<option value="2"></option>
-						<option value="3"> PZA</option>
-						<option value="4"> SOBRE</option>
-						<option value="5">LT</option>
-						<option value="6">KG</option>
-						<option value="7">CAJA</option>
+						<option value="1">ML</option>						
+						<option value="2">PZA</option>
+						<option value="3">SOBRE</option>
+						<option value="4">LT</option>
+						<option value="5">KG</option>
+						<option value="6">CAJA</option>
 					</select>
 				</div>
 			</div>
@@ -96,19 +96,50 @@
 				</div>
 				<div class="large-6 columns" >
 					<label>Cantidad</label>
-					<div class="cantidad" id="cantidad"></div>
+					<div class="cantidad" id="cantidad"></div>								
 					<input type="hidden" name="now" class="now" id="now" value="<?=base_url()?>">
-				</div>
+				</div>				
 
 			</div>
 		</div>
-
 		
 		<div class="row">
+				<div class="estadoregistro" id="estadoregistro"></div>
+		</div>	
+		<div class="row">			
 			<div class="large-6 columns" >
-				<button id="registroalimento" class="registroalimento">Registrar</button>
-				
-			</div>
-			
+				<button id="registroalimento" class="registroalimento">Registrar</button>				
+			</div>			
 		</div>
+
+			
+		<div class="row">
+			<button class="listadoactual" id="listadoactual">
+				Mostrar alimentos registrados
+			</button>
+			<button class="ocultar" id="ocultar">
+				Ocultar alimentos registrados
+			</button>
+			
+
+		</div>	
+			<div class="listaact">
+				<div class="row">
+
+					<div class="large-1 columns"><p>Identificador</p></div>				
+					<div class="large-1 columns"><p>Status</p></div>
+					<div class="large-4 columns"><p>Nombre del ingrediente</p></div>				
+					<div class="large-2 columns"><p>Unidad </p></div>					
+					<div class="large-2 columns"><p>Tipo de alimento</p></div>
+					<div class="large-2 columns"><p>Presentación</p></div>
+					
+				</div>	
+				<div class="row">
+					<div class="listaalimentos" id="listaalimentos"></div>
+				</div>
+
+			</div>			
+
+		
+		
 

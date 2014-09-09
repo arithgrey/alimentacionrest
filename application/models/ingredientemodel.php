@@ -6,6 +6,20 @@ class ingredientemodel extends CI_Model {
         parent::__construct();        
         $this->load->database();
     }
+
+    function listingrediente(){
+
+        $querylist="select ingrediente.nombre as nombreingrediente , idingrediente , unidad, 
+        ingrediente.status as estado, tipoingrediente.nombre,  tipoingrediente.descripcion , 
+        presentacion.nombre as nombrepresentacion from ingrediente, tipoingrediente,
+        presentacion where ingrediente.idtipoingrediente=tipoingrediente.idtipoingrediente
+        and ingrediente.idpresentacion = presentacion.idpresentacion";
+
+        $result = $this->db->query($querylist);
+        return $result->result_array();
+
+    }
+
     /*Inserta ingredienten en la db*/
     function insertingrediente($nombre, $idtipoingrediente, 
         $idpresentacion, $unidad , $clasificacion ){
@@ -19,9 +33,9 @@ class ingredientemodel extends CI_Model {
         $databasemsj="";
 
         if ($result == 1) {
-          $databasemsj="Ingrediente registrado con éxito!!";
+          $databasemsj="1";
         }else{
-          $databasemsj="Problemas al registrar el ingrediente en la base de datos";
+          $databasemsj="0";
         }
 
         return $databasemsj;  

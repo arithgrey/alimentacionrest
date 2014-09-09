@@ -1,16 +1,21 @@
-
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
-
 require APPPATH.'/libraries/REST_Controller.php';
 class Ingrediente extends REST_Controller{
+    
 
+    function listingrediente_POST(){
+
+        $this->load->model("ingredientemodel");        
+        $lista = $this->ingredientemodel->listingrediente();
+        $this->response($lista);
+
+    }
 
     function registroingrediente_POST(){
 
         $this->load->model("ingredientemodel");
 
-
-        $nombre= $this->input->post("ingrediente");
+        $nombre= $this->input->post("nombreingrediente");
         $idtipoingrediente= $this->input->post("tipoingrediente");
         $idpresentacion= $this->input->post("presentacion");
         $unidad= $this->input->post("unidad");
@@ -20,7 +25,12 @@ class Ingrediente extends REST_Controller{
         $ingretiente= $this->ingredientemodel->insertingrediente($nombre, $idtipoingrediente, 
         $idpresentacion, $unidad , $clasificacion );
 
-        $data = $ingretiente;        
+        $data="";
+        if ($ingretiente == 1 ) {
+            $data="Éxito al registrar";    
+        }else{
+            $data="Falla en el registro";   
+        }
         $this->response($data);
     }
 
