@@ -24,5 +24,14 @@ class Backend extends CI_Controller {
 		$this->load->view("Frondend/menuregistro");
 		$this->load->view("Template/footer",$data);		
 	}
+	function opcionesmenu(){
+
+		$data["titulo"]="opciones del menú";		
+
+		$this->load->view("Template/header", $data);
+		$this->load->view("Frondend/menu");
+		$this->load->view("Template/footer",$data);		
+
+	}
 
 }

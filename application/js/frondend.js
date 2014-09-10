@@ -28,8 +28,12 @@ $(document).on("ready", function(){
 			$(".cantidad").html(selectcantidad);
 			$('.6').show();
 	});*/
-
-
+	
+	baseurl = $('.now').val();
+	
+	$('.administracion').click(function(){
+		window.location.replace(baseurl);
+	});
 
 	//Presentación
 	$('.nombreingrediente').click(function(){

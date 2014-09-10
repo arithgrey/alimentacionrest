@@ -114,6 +114,9 @@
 
 			
 		<div class="row">
+			<button class="administracion" id="administracion">
+				Administración
+			</button>
 			<button class="listadoactual" id="listadoactual">
 				Mostrar alimentos registrados
 			</button>

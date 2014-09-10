@@ -4,7 +4,7 @@
 		<button onclick="showtipolimentos()">Tipos de alimentos</button>		
 		<button onclick="showpresentacion()">Presentación de los alimentos</button>	
 		<button onclick="redirecalimento('<?=base_url()?>')">Alimentos</button>
-		<button onclick="">Opciones de menú</button>
+		<button id="opcionesmenu" class="opcionesmenu">Opciones de menú</button>
 	</div>	
 </div>
 
