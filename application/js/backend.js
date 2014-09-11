@@ -5,6 +5,12 @@ $(document).on("ready", function(){
 	$(".formulariotipoalimentos").hide();
 	$(".formulariopresentacion").hide();
 
+	$('.opcionesmenu').click(function(){
+		window.location.replace("index.php/backend/opcionesmenu");
+	});
+
+
+
 });
 
 function showtipolimentos(){
@@ -19,6 +25,8 @@ function redirecalimento(url){
 
 	window.location.replace(url+"index.php/backend/ingrediente");
 }
+
+
 function listpresentacion(){
 
 	actual = $(".now").val();	

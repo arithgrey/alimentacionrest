@@ -2,7 +2,7 @@
 <script type="text/javascript" src="<?=base_url()?>/application/js/ingrediente.js"></script>
 
 <div class="row">
-	<h3>Bienvenido al registro de Ingredientes</h3>
+	<h3>Bienvenido al registro de alimentos</h3>
 </div>
 		<div class="row">
 			
@@ -114,6 +114,9 @@
 
 			
 		<div class="row">
+			<button class="administracion" id="administracion">
+				Administración
+			</button>
 			<button class="listadoactual" id="listadoactual">
 				Mostrar alimentos registrados
 			</button>
