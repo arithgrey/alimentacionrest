@@ -12,6 +12,7 @@ class Opcionmenu extends REST_Controller{
             $this->load->model("opcionmenumodel");
             $responsedb = $this->opcionmenumodel->registroopcion($opcionmenu);
 
+<<<<<<< HEAD
             $responserest="";
             if ($responsedb == true) {
             	
@@ -21,10 +22,14 @@ class Opcionmenu extends REST_Controller{
             	$responserest="El registro fué efectuado con errores";
             }
             $this->response( $responserest);
+=======
+            $this->response($responsedb);
+>>>>>>> e1a461b9cbeec6a3acba695ce7a1531308ea65bf
 
            
         }
 
+<<<<<<< HEAD
         function listopciones_GET(){
 
         	$this->load->model("opcionmenumodel");
@@ -34,5 +39,7 @@ class Opcionmenu extends REST_Controller{
         }
 
 
+=======
+>>>>>>> e1a461b9cbeec6a3acba695ce7a1531308ea65bf
 
 }

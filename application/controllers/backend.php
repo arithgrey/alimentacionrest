@@ -26,7 +26,11 @@ class Backend extends CI_Controller {
 	}
 	function opcionesmenu(){
 
+<<<<<<< HEAD
 		$data["titulo"]="Opciones del menú";		
+=======
+		$data["titulo"]="opciones del menú";		
+>>>>>>> e1a461b9cbeec6a3acba695ce7a1531308ea65bf
 
 		$this->load->view("Template/header", $data);
 		$this->load->view("Frondend/menu");

@@ -15,6 +15,7 @@
 
 	   	return $responsemysql; 
 	      
+<<<<<<< HEAD
 	 }   
 	 function listopciones(){
 	 	
@@ -26,6 +27,9 @@
 
 	 }
 
+=======
+	    }   
+>>>>>>> e1a461b9cbeec6a3acba695ce7a1531308ea65bf
 
 }
 

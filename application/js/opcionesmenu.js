@@ -12,6 +12,7 @@ $(document).on("ready", function(){
 		$('.shownuevo').hide();
 	});
 
+<<<<<<< HEAD
 	/*
 	$("#verlista").click(function(){
 
@@ -37,18 +38,25 @@ $(document).on("ready", function(){
 	});
 */
 
+=======
+>>>>>>> e1a461b9cbeec6a3acba695ce7a1531308ea65bf
 	/*Registro de nuevo elementp*/
 
 	$('.registraropcion').click(function(){
 
 		urlformada = $(".now").val();	
 		opcionmenu =  $(".opcionmenu").val();
+<<<<<<< HEAD
 		if (opcionmenu.length <1) {
 
 			$('.reporte-registro').html("Registre el nombre de su opción de menú");
 
 		}else{
 			param = {"opcionmenu" : opcionmenu}
+=======
+
+		param = {"opcionmenu" : opcionmenu}
+>>>>>>> e1a461b9cbeec6a3acba695ce7a1531308ea65bf
 				
 		urlregistro= urlformada+"index.php/api/opcionmenu/registro/format/json";
 		var jqxhr = $.ajax({
@@ -60,17 +68,24 @@ $(document).on("ready", function(){
 
 		}).done(function(data) {
 				
+<<<<<<< HEAD
 			$('.reporte-registro').html(data);
 			$(".opcionmenu").val("");
+=======
+			alert(data);	
+>>>>>>> e1a461b9cbeec6a3acba695ce7a1531308ea65bf
 
 		})
 		.fail(function() {
 			alert( "error" );
 		})
 		.always(function(){});
+<<<<<<< HEAD
 		}
 
 		
+=======
+>>>>>>> e1a461b9cbeec6a3acba695ce7a1531308ea65bf
 
 
 	});
