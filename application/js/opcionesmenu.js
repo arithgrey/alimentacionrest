@@ -12,14 +12,22 @@ $(document).on("ready", function(){
 		$('.shownuevo').hide();
 	});
 
+<<<<<<< HEAD
 	
 	$("#verlista").click(function(){
 		urlformada = $(".now").val();	
+=======
+<<<<<<< HEAD
+	/*
+	$("#verlista").click(function(){
+
+>>>>>>> 2e0fcf702d99f5b81cfd49e162676a191427b6ad
 		urlregistro= urlformada+"index.php/api/opcionmenu/listopciones/format/json";
 		var jqxhr = $.ajax({
 
 			type: "POST",
 			url: urlregistro,					
+<<<<<<< HEAD
 			dataType: "json"	
 
 		}).done(function(data) {
@@ -43,18 +51,50 @@ $(document).on("ready", function(){
 	});
 
 
+=======
+			dataType: "text"	
+
+		}).done(function(data) {
+			alert(data);				
+			$('.lista-opciones').html(data);
+		})
+		.fail(function() {
+			alert( "error" );
+		})
+		.always(function(){});
+		}
+
+		
+
+	});
+*/
+
+=======
+>>>>>>> e1a461b9cbeec6a3acba695ce7a1531308ea65bf
+>>>>>>> 2e0fcf702d99f5b81cfd49e162676a191427b6ad
 	/*Registro de nuevo elementp*/
 
 	$('.registraropcion').click(function(){
 
 		urlformada = $(".now").val();	
 		opcionmenu =  $(".opcionmenu").val();
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 2e0fcf702d99f5b81cfd49e162676a191427b6ad
 		if (opcionmenu.length <1) {
 
 			$('.reporte-registro').html("Registre el nombre de su opción de menú");
 
 		}else{
 			param = {"opcionmenu" : opcionmenu}
+<<<<<<< HEAD
+=======
+=======
+
+		param = {"opcionmenu" : opcionmenu}
+>>>>>>> e1a461b9cbeec6a3acba695ce7a1531308ea65bf
+>>>>>>> 2e0fcf702d99f5b81cfd49e162676a191427b6ad
 				
 		urlregistro= urlformada+"index.php/api/opcionmenu/registro/format/json";
 		var jqxhr = $.ajax({
@@ -66,22 +106,41 @@ $(document).on("ready", function(){
 
 		}).done(function(data) {
 				
+<<<<<<< HEAD
 			$('.reporte-registro').html(data);
 			$(".opcionmenu").val("");
+=======
+<<<<<<< HEAD
+			$('.reporte-registro').html(data);
+			$(".opcionmenu").val("");
+=======
+			alert(data);	
+>>>>>>> e1a461b9cbeec6a3acba695ce7a1531308ea65bf
+>>>>>>> 2e0fcf702d99f5b81cfd49e162676a191427b6ad
 
 		})
 		.fail(function() {
 			alert( "error" );
 		})
 		.always(function(){});
+<<<<<<< HEAD
 		}
 
 		
+=======
+<<<<<<< HEAD
+		}
+
+		
+=======
+>>>>>>> e1a461b9cbeec6a3acba695ce7a1531308ea65bf
+>>>>>>> 2e0fcf702d99f5b81cfd49e162676a191427b6ad
 
 
 	});
 
 
+<<<<<<< HEAD
 
 
 	$("#listadoopcionesmenu").click(function(){
@@ -122,6 +181,10 @@ $(document).on("ready", function(){
 		
 			
 		
+=======
+		$('.d').click(function(){
+
+>>>>>>> 2e0fcf702d99f5b81cfd49e162676a191427b6ad
 		urlformada = $(".now").val();	
 		urllista= urlformada+"index.php/api/ingrediente/listingrediente/format/json";
 
@@ -138,13 +201,19 @@ $(document).on("ready", function(){
 			for (var a = 0; a < data.length; a++) {
 
 				ingrediente =data[a].idingrediente;
+<<<<<<< HEAD
 				nombreingrediente = data[a].nombreingrediente;				
+=======
+				nombreingrediente = data[a].nombreingrediente;
+				unidad = data[a].unidad;
+>>>>>>> 2e0fcf702d99f5b81cfd49e162676a191427b6ad
 				nombre= data[a].nombre;												
 				status = data[a].estado;
 				nombrepresentacion = data[a].nombrepresentacion;
 
 
 				listdata +="<div class='row'>"+						   						   
+<<<<<<< HEAD
 						   "<div class='large-4 columns'><input type='checkbox' name='ingredienteselect' class='ingredienteselect' id='ingredienteselect' > "+nombreingrediente+"</div>"+						   
 						   
 							"</div>";						   							
@@ -155,6 +224,30 @@ $(document).on("ready", function(){
 		});
 
 		
+=======
+						   "<div class='large-4 columns'>"+nombreingrediente+"</div>"+						   
+						   /*
+						   "<div class='large-2 columns'>"+unidad+"</div>"+
+						   "<div class='large-2 columns'>"+nombre+"</div>"+						   
+						   "<div class='large-2 columns'>"+nombrepresentacion+"</div>
+							*/
+							"</div>";						   							
+			}
+
+			$('.listaalimentos').html(listdata);
+			
+			//$(".listadoactual").html("Refrescar listado");
+			
+			
+		})
+		.fail(function() {
+			alert( "error" );
+		})
+		.always(function() {
+			//alert( "complete" );
+		});
+
+>>>>>>> 2e0fcf702d99f5b81cfd49e162676a191427b6ad
 
 
 	});

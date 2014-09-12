@@ -9,9 +9,12 @@ $(document).on("ready", function(){
 		window.location.replace("index.php/backend/opcionesmenu");
 	});
 
+<<<<<<< HEAD
 	$('.asignaringredientes').click(function(){
 		window.location.replace("index.php/backend/asignaringredientes");	
 	});
+=======
+>>>>>>> 2e0fcf702d99f5b81cfd49e162676a191427b6ad
 
 
 });
