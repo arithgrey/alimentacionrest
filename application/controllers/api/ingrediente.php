@@ -18,22 +18,20 @@ class Ingrediente extends REST_Controller{
         $nombre= $this->input->post("nombreingrediente");
         $idtipoingrediente= $this->input->post("tipoingrediente");
         $idpresentacion= $this->input->post("presentacion");
-        $unidad= $this->input->post("unidad");
         $clasificacion= $this->input->post("clasificacion");
 
+        $ingretiente = $this->ingredientemodel->insertingrediente($nombre, $idtipoingrediente, $idpresentacion , $clasificacion );       
 
-        $ingretiente= $this->ingredientemodel->insertingrediente($nombre, $idtipoingrediente, 
-        $idpresentacion, $unidad , $clasificacion );
-
-        $data="";
-        if ($ingretiente == 1 ) {
-            $data="Éxito al registrar";    
+        $dataresponse="";
+        if ($ingretiente == true) {
+            $dataresponse  ="éxito en el registro";
         }else{
-            $data="Falla en el registro";   
+            $dataresponse = "Falla al intentar registrar";
         }
-        $this->response($data);
-    }
 
+        $this->response($dataresponse);
+
+    }
 
     
 }

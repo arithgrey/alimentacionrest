@@ -1,6 +1,5 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
 
-
 require APPPATH.'/libraries/REST_Controller.php';
 
 class Backend extends REST_Controller{
@@ -23,11 +22,14 @@ class Backend extends REST_Controller{
     function registropresentacion_POST(){
 
             $this->load->model("backendmodel");
+            
             $nombre = $this->input->post("nombre");
             $descripcion = $this->input->post("descripcion");
+            $unidad =$this->input->post("unidad");
+            $equivalencia = $this->input->post("equivalencia");
 
-            $databasemsj = $this->backendmodel->registrapresentacion($nombre , $descripcion);
-
+            $databasemsj = $this->backendmodel->registrapresentacion($nombre , $descripcion, $unidad , $equivalencia);
+            
             $data["nombre"]=$nombre;
             $data["descripcion"]=$descripcion;
             $data["databasemsj"]=$databasemsj;
