@@ -26,13 +26,29 @@ class Backend extends CI_Controller {
 	}
 	function opcionesmenu(){
 
+<<<<<<< HEAD
 		$data["titulo"]="Opciones del menú";		
+=======
+<<<<<<< HEAD
+		$data["titulo"]="Opciones del menú";		
+=======
+<<<<<<< HEAD
+		$data["titulo"]="Opciones del menú";		
+=======
+		$data["titulo"]="opciones del menú";		
+>>>>>>> e1a461b9cbeec6a3acba695ce7a1531308ea65bf
+>>>>>>> 2e0fcf702d99f5b81cfd49e162676a191427b6ad
+>>>>>>> 36ecdae996985f1e7a575e130763e1d696ba3eee
 
 		$this->load->view("Template/header", $data);
 		$this->load->view("Frondend/menu");
 		$this->load->view("Template/footer",$data);		
 
 	}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 36ecdae996985f1e7a575e130763e1d696ba3eee
 	function asignaringredientes(){
 
 		$data["titulo"] = "Asignar ingredientes a las opciones de menú";
@@ -43,5 +59,10 @@ class Backend extends CI_Controller {
 
 	}
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 2e0fcf702d99f5b81cfd49e162676a191427b6ad
+>>>>>>> 36ecdae996985f1e7a575e130763e1d696ba3eee
 
 }
