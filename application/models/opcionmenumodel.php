@@ -15,12 +15,23 @@
 
 	   	return $responsemysql; 
 	      
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 2e0fcf702d99f5b81cfd49e162676a191427b6ad
+>>>>>>> 36ecdae996985f1e7a575e130763e1d696ba3eee
+>>>>>>> 8cfe4435da34a089fc4147ddcf74339330108ed4
 	 }   
 	 function listopciones(){
 	 	
 	 	$this->db->select('idopcionmenu, nombre');
 	 	$query = $this->db->get_where('opcionmenu', array('status' => "activo"));
 	 	return $query->result_array();
+<<<<<<< HEAD
 	 }
 	 function ediataopcionmenuingrediente($opcionmenu , $ingrediente){
 
@@ -43,10 +54,25 @@
 	 	
        	
 
+=======
+	 	
+>>>>>>> 8cfe4435da34a089fc4147ddcf74339330108ed4
 	 	
 
 	 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+	    }   
+>>>>>>> e1a461b9cbeec6a3acba695ce7a1531308ea65bf
+>>>>>>> 2e0fcf702d99f5b81cfd49e162676a191427b6ad
+>>>>>>> 36ecdae996985f1e7a575e130763e1d696ba3eee
+>>>>>>> 8cfe4435da34a089fc4147ddcf74339330108ed4
 
 }
 

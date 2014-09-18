@@ -9,9 +9,24 @@ $(document).on("ready", function(){
 		window.location.replace("index.php/backend/opcionesmenu");
 	});
 
+<<<<<<< HEAD
 	$('.asignaringredientes').click(function(){
 		window.location.replace("index.php/backend/asignaringredientes");	
 	});
+=======
+<<<<<<< HEAD
+	$('.asignaringredientes').click(function(){
+		window.location.replace("index.php/backend/asignaringredientes");	
+	});
+=======
+<<<<<<< HEAD
+	$('.asignaringredientes').click(function(){
+		window.location.replace("index.php/backend/asignaringredientes");	
+	});
+=======
+>>>>>>> 2e0fcf702d99f5b81cfd49e162676a191427b6ad
+>>>>>>> 36ecdae996985f1e7a575e130763e1d696ba3eee
+>>>>>>> 8cfe4435da34a089fc4147ddcf74339330108ed4
 
 
 });
