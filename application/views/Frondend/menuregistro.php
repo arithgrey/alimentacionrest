@@ -2,7 +2,7 @@
 <script type="text/javascript" src="<?=base_url()?>/application/js/ingrediente.js"></script>
 
 <div class="row">
-	<h3>Bienvenido al registro de Ingredientes</h3>
+	<h3>Bienvenido al registro de alimentos</h3>
 </div>
 		<div class="row">
 			
@@ -46,35 +46,12 @@
 
 		<div class="4" id="4">
 
-				<div class="row">
-				<div class="large-6 columns" >
-					<div class="paso4">
-						<h3>4</h3>
-					</div>
-				</div>
-				<div class="large-6 columns" >
-					<label>Unidad</label>
-					<select name="unidad" id="unidad" class="unidad">
-						
-						<option value=""></option>				
-						<option value="1">ML</option>						
-						<option value="2">PZA</option>
-						<option value="3">SOBRE</option>
-						<option value="4">LT</option>
-						<option value="5">KG</option>
-						<option value="6">CAJA</option>
-					</select>
-				</div>
-			</div>
-
-		</div>
-		<div class="5" id="5">
 
 		<div class="row">
 				
 				<div class="large-6 columns" >
 					<div class="paso4">
-						<h3>5</h3>
+						<h3>4</h3>
 					</div>
 				</div>
 
@@ -87,6 +64,30 @@
 				</div>
 
 			</div>
+
+		<!--		
+				<div class="row">
+				<div class="large-6 columns" >
+					<div class="paso4">
+						<h3>4</h3>
+					</div>
+				</div>
+				<div class="large-6 columns" >
+					<label>Unidad</label>
+					<select name="unidad" id="unidad" class="unidad">
+											
+						<option value=""></option>				
+						<option value="1">ML</option>						
+						<option value="2">PZA</option>
+						<option value="3">SOBRE</option>
+						<option value="4">LT</option>
+						<option value="5">KG</option>
+						<option value="6">CAJA</option>
+					</select>
+				</div>
+			</div>
+		-->
+
 		</div>
 
 		<div class="6">
@@ -114,6 +115,9 @@
 
 			
 		<div class="row">
+			<button class="administracion" id="administracion">
+				Administración
+			</button>
 			<button class="listadoactual" id="listadoactual">
 				Mostrar alimentos registrados
 			</button>
