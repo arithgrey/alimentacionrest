@@ -1,6 +1,19 @@
 <script type="text/javascript" src="<?=base_url()?>application/js/backend.js"></script>
 <div class="row">
 	<div class="large-12 columns">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 2e0fcf702d99f5b81cfd49e162676a191427b6ad
+>>>>>>> 36ecdae996985f1e7a575e130763e1d696ba3eee
+>>>>>>> 8cfe4435da34a089fc4147ddcf74339330108ed4
+>>>>>>> bcc3e010af37d046f2f3a6d7507b0d5296117bde
 		<h3>Alimentos</h3>
 		<button onclick="showtipolimentos()" class="large-4 columns">Tipos de alimentos</button>		
 		<a onclick="showpresentacion()"  class="button disabled large-4 columns">Presentación de los alimentos</a>  	
@@ -10,10 +23,40 @@
 	<div class="large-12 columns">
 		<h3>Opciones del Menú y recetas</h3>
 		<button id="opcionesmenu" class="opcionesmenu large-4 columns">Opciones de menú</button>	
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 36ecdae996985f1e7a575e130763e1d696ba3eee
+>>>>>>> 8cfe4435da34a089fc4147ddcf74339330108ed4
+>>>>>>> bcc3e010af37d046f2f3a6d7507b0d5296117bde
 		<button id="asignaringredientes" class="asignaringredientes  large-4 columns">Asignar ingredientes a las opciones de menú</button>	
 
 	</div>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+	</div>
+
+=======
+		<button onclick="showtipolimentos()">Tipos de alimentos</button>		
+		<button onclick="showpresentacion()">Presentación de los alimentos</button>	
+		<button onclick="redirecalimento('<?=base_url()?>')">Alimentos</button>
+		<button id="opcionesmenu" class="opcionesmenu">Opciones de menú</button>
+	</div>	
+>>>>>>> e1a461b9cbeec6a3acba695ce7a1531308ea65bf
+>>>>>>> 2e0fcf702d99f5b81cfd49e162676a191427b6ad
+>>>>>>> 36ecdae996985f1e7a575e130763e1d696ba3eee
+>>>>>>> 8cfe4435da34a089fc4147ddcf74339330108ed4
+>>>>>>> bcc3e010af37d046f2f3a6d7507b0d5296117bde
 </div>
 
 <div class="formulariotipoalimentos" id="formulariotipoalimentos">
