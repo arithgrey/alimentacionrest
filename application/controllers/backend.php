@@ -10,7 +10,7 @@ class Backend extends CI_Controller {
 	function index()
 	{
 
-		$data["titulo"]="Registro de tipos de alimentos y presentación";		
+		$data["titulo"]="Panel de administración";		
 		$this->load->view("Template/header", $data);
 		$this->load->view("backendplataforma/alimentos",$data);
 		$this->load->view("Template/footer",$data);		
@@ -18,11 +18,30 @@ class Backend extends CI_Controller {
 
 	function ingrediente(){
 
-		$data["titulo"]="Registro de ingredientes";		
+		$data["titulo"]="Alimentos registro";		
 
 		$this->load->view("Template/header", $data);
 		$this->load->view("Frondend/menuregistro");
 		$this->load->view("Template/footer",$data);		
 	}
+	function opcionesmenu(){
+
+		$data["titulo"]="Opciones del menú";		
+
+		$this->load->view("Template/header", $data);
+		$this->load->view("Frondend/menu");
+		$this->load->view("Template/footer",$data);		
+
+	}
+	function asignaringredientes(){
+
+		$data["titulo"] = "Asignar ingredientes a las opciones de menú";
+		
+		$this->load->view("Template/header", $data);
+		$this->load->view("Frondend/asignar");
+		$this->load->view("Template/footer",$data);		
+
+	}
+
 
 }

@@ -69,12 +69,11 @@ $(document).on("ready", function(){
 
 		ingrediente = $(".nombreingrediente").val();
 		presentacion = $(".presentacion").val();
-		tipoingrediente = $(".tipoingrediente").val();
-		unidad = $(".unidad").val();
+		tipoingrediente = $(".tipoingrediente").val();		
 		clasificacion = $(".clasificacion").val();
 		urlformada = $(".now").val();
 
-		params = { "nombreingrediente" : ingrediente , "presentacion" : presentacion, "tipoingrediente" : tipoingrediente, "unidad": unidad, "clasificacion": clasificacion };
+		params = { "nombreingrediente" : ingrediente , "presentacion" : presentacion, "tipoingrediente" : tipoingrediente, "clasificacion": clasificacion };
 
 		var jqxhr = $.ajax({
 
@@ -85,15 +84,12 @@ $(document).on("ready", function(){
 
 		}).done(function(data) {
 			
-			$('.estadoregistro').html(data);
+			$('#estadoregistro').html(data);
 			
 			
 		})
 		.fail(function() {
 			alert( "error" );
-		})
-		.always(function() {
-			//alert( "complete" );
 		});
 
 

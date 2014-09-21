@@ -5,6 +5,15 @@ $(document).on("ready", function(){
 	$(".formulariotipoalimentos").hide();
 	$(".formulariopresentacion").hide();
 
+	$('.opcionesmenu').click(function(){
+		window.location.replace("index.php/backend/opcionesmenu");
+	});
+
+	$('.asignaringredientes').click(function(){
+		window.location.replace("index.php/backend/asignaringredientes");	
+	});
+
+
 });
 
 function showtipolimentos(){
@@ -19,6 +28,8 @@ function redirecalimento(url){
 
 	window.location.replace(url+"index.php/backend/ingrediente");
 }
+
+
 function listpresentacion(){
 
 	actual = $(".now").val();	
@@ -85,6 +96,11 @@ function registropresentacion(url){
 	nombre = document.getElementById("nombrepresentacion").value;
 	descripcion = document.getElementById("descripcionpresentacion").value;
 
+	unidad = $("#unidad").val();
+	equivalencia = $("#equivalencia").val();
+
+	
+
 
 	if (descripcion.length < 1) {
 		descripcion="s/n";
@@ -96,7 +112,7 @@ function registropresentacion(url){
 
 	}else{
 
-		params = { "nombre" : nombre , "descripcion" : descripcion };
+		params = { "nombre" : nombre , "descripcion" : descripcion , "unidad" : unidad , "equivalencia" : equivalencia };
 
 		var jqxhr = $.ajax({
 

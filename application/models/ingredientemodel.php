@@ -7,7 +7,7 @@ class ingredientemodel extends CI_Model {
         $this->load->database();
     }
 
-    function listingrediente(){
+    function listingrediente($idtipoingrediente ='' ){
 
         $querylist="select ingrediente.nombre as nombreingrediente , idingrediente , unidad, 
         ingrediente.status as estado, tipoingrediente.nombre,  tipoingrediente.descripcion , 
@@ -15,30 +15,29 @@ class ingredientemodel extends CI_Model {
         presentacion where ingrediente.idtipoingrediente=tipoingrediente.idtipoingrediente
         and ingrediente.idpresentacion = presentacion.idpresentacion";
 
-        $result = $this->db->query($querylist);
+        $querylistid="SELECT idingrediente , nombre as nombreingrediente FROM ingrediente  WHERE idtipoingrediente='".$idtipoingrediente."'";
+
+        if (strlen($idtipoingrediente)>0) {
+            $result = $this->db->query($querylistid);    
+        }else{
+            $result = $this->db->query($querylist);    
+        }
+
         return $result->result_array();
 
     }
 
     /*Inserta ingredienten en la db*/
-    function insertingrediente($nombre, $idtipoingrediente, 
-        $idpresentacion, $unidad , $clasificacion ){
+    function insertingrediente($nombre, $idtipoingrediente, $idpresentacion, $clasificacion ){
 
         $status=1;
 
-        $query_insert="INSERT INTO ingrediente(nombre, idtipoingrediente, idpresentacion, unidad, clasificacion, status)
-         VALUES('".$nombre."' , '".$idtipoingrediente."', '".$idpresentacion."', '".$unidad."', '".$clasificacion."', '". $status."'  ) ";     
+        $query_insert="INSERT INTO ingrediente(nombre, idtipoingrediente, idpresentacion, clasificacion, status)
+         VALUES('".$nombre."' , '".$idtipoingrediente."', '".$idpresentacion."',  '".$clasificacion."', '". $status."'  ) ";     
 
         $result = $this->db->query($query_insert);
-        $databasemsj="";
-
-        if ($result == 1) {
-          $databasemsj="1";
-        }else{
-          $databasemsj="0";
-        }
-
-        return $databasemsj;  
+        return $result;
+        
 
 
     }

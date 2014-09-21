@@ -10,7 +10,7 @@
     /**/
     function listtipoingrediente(){
 
-      $query_list="SELECT nombre FROM tipoingrediente";     
+      $query_list="SELECT * FROM tipoingrediente";     
       $result = $this->db->query($query_list);
       return $result->result_array();
 
@@ -24,9 +24,10 @@
     }
 
     /**/
-    function registrapresentacion($nombre , $descripcion){
+    function registrapresentacion($nombre , $descripcion, $unidad, $equivalencia){
               
-      $query_insert="INSERT INTO presentacion (nombre, descripcion, status) VALUES('".$nombre."' , '".$descripcion."', '1'  ) ";     
+      $query_insert="INSERT INTO presentacion (nombre, descripcion, status, unidad, equivalencia) 
+      VALUES('".$nombre."' , '".$descripcion."', '1' , '". $unidad ."' , '".$equivalencia."' ) ";     
       $result = $this->db->query($query_insert);
 
       $databasemsj="";

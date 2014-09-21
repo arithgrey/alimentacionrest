@@ -2,7 +2,7 @@
 
 <head>
 <title><?=$titulo?></title>
-	
+	<!--Información arithgrey@gmail.com-->
 	<!--TAGS-->	
 	<?php
 		$meta = array(
@@ -47,5 +47,5 @@
 	</header>
 	<div id='wrapper' class='wrapper'>
 		<div class='content' id='content'>
-
+		<input type="hidden" class="now" id="id" value="<?=base_url()?>">	
 
