@@ -1,0 +1,21 @@
+header{
+	width: 80%;
+	margin: 0 auto;	
+}
+#icono_twitter , #icono_fb, #icono_tel {
+	width: 70px;
+	border-radius: 5px;
+}
+h1, h2, h3, h4, h5{
+
+	color: #2B75B9;
+}
+
+#sliderOutput3{
+	background: rgb(226, 41, 41);
+	color: white;
+	padding: 10px;
+}#img_grey{
+	
+	border-radius: 10px;	
+}
